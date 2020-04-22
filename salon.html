@@ -6,7 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body id="visionage">
+    <main>
+        <form class ="rechercher" action="" method="POST">
+            <input type="text" id="nav" placeholder="Lien Youtube">
+            <input type="submit" value="Rechercher">
+        </form>
+        <div class="box">
+            <div id="video"><iframe width="900" height="500" src="https://www.youtube.com/embed/BWG29Kss-rY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <section id="chatbox">
+                <div id="historique">
+                    Historique Chat
+                </div>
+                <div id="utilisateurs">
+                    Utilisateurs dans le salon : Serjuani, Mohamed, Paul, Raph.
+                </div>
+                <div id="messages">
+                    Messages :<br><br>
+                    Paul : Salut les gars.<br>
+                    Serjuani : Ils sont éclatés les Fnatics !<br>
+                    Mohamed : Ouais.<br>
+                    Raph : J'avoue.
+                </div>
+                <div id="bouton">
+                    <form class ="send" action="" method="POST">
+                        <input type="text" id="envoyer" placeholder="Écrire un message">
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </section>
+            <div class="hide">Three
+                <br>has
+                <br>extra
+                <br>text
+            </div>
+          </div>
+    </main>
 </body>
 </html>
