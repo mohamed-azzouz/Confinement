@@ -18,6 +18,8 @@ include('fonctions.php');
 			addSalon();
 			?>
 		</form>
+
+		<n
 	</main>
 
 </body>
