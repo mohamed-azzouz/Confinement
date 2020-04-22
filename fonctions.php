@@ -5,18 +5,20 @@
 function inscription()
 {
 
+	
     if(!isset($_SESSION['login']))
     {
-
+    	
 
         if(isset($_POST['valider']))
         {
 
+          
             if(!empty($_POST['login']) and !empty($_POST['password']) and !empty($_POST['confirmpassword']) )
             {
 
-         
-                $requeteUser = "SELECT * FROM utilisateurs WHERE login='".$_POST['login']."'";
+            	$connexion = mysqli_connect('Localhost', 'root', '', 'confinement');
+                $requeteUser = "SELECT * FROM utilisateurs WHERE login = '".$_POST['login']."'";
                 $queryUser = mysqli_query($connexion, $requeteUser);
                 $resultatUser = mysqli_fetch_row($queryUser);
 
@@ -27,9 +29,11 @@ function inscription()
                     {
                         $password = $_POST['password'];
                         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-                        $requeteNewUser = "INSERT INTO utilisateurs (login, password, mail, adresse, rank) VALUES ('".$_POST['login']."','".$passwordHash."', '".$_POST['mail']."', '".$_POST['adresse']."', 'MEMBRE')";
+                        $requeteNewUser = "INSERT INTO utilisateurs (login, password, avatar) VALUES ('".$_POST['login']."','".$passwordHash."', 'VIDE')";
                         $queryNewUser = mysqli_query($connexion, $requeteNewUser);
                         header('location:connexion.php');
+                        
+                        
 
                     }
 
@@ -73,7 +77,7 @@ function inscription()
 function connexion()
 
 {
-   
+
     if(!isset($_SESSION['login']))
     {
 
@@ -83,12 +87,14 @@ function connexion()
             if(!empty($_POST['login']) and !empty($_POST['password']))
             {
                 
-                $requeteLogUser = "SELECT * FROM utilisateurs WHERE login='".$_POST['login']."'";
+                $connexion = mysqli_connect('Localhost', 'root', '', 'confinement');
+                $requeteLogUser = "SELECT * FROM utilisateurs WHERE login = '".$_POST['login']."'";
                 $queryLogUser = mysqli_query($connexion, $requeteLogUser);
                 $resultatLogUser = mysqli_fetch_assoc($queryLogUser);
                 
                 $password=$_POST['password'];
 
+             
 
                 if($resultatLogUser['login'] != $_POST['login'])
                 {
@@ -105,9 +111,6 @@ function connexion()
                             $_SESSION['id'] = $resultatLogUser['id'];
                             $_SESSION['login'] = $resultatLogUser['login'];
                             $_SESSION['password'] = $resultatLogUser['password'];
-                            $_SESSION['mail'] = $resultatLogUser['mail'];
-                            $_SESSION['adresse'] = $resultatLogUser['adresse'];
-                            $_SESSION['rank'] = $resultatLogUser['rank'];
                             
                             header('location:index.php');
                         }
@@ -128,6 +131,27 @@ function connexion()
         header('location:index.php');  
     }
 
+}
+
+function addSalon()
+{
+	if (isset($_SESSION['login'])) 
+	{
+		if (isset($_POST['addSalon'])) 
+		{
+			if (!empty($_POST['nameSalon'])) 
+			{
+				$connexion = mysqli_connect('Localhost', 'root', '', 'confinement');
+				$requeteAddSalon = "INSERT INTO salon (id_utilisateur, nom) VALUES ('".$_SESSION['id']."', '".$_POST['nameSalon']."')";
+				$queryAddSalon = mysqli_query($connexion, $requeteAddSalon);
+
+			}
+		}
+	}
+	else
+	{
+		echo "VEILLEZ VOUS CONNECTEZ";
+	}
 }
 
 ?>

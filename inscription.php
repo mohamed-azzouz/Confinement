@@ -1,14 +1,6 @@
 <?php
 session_start();
-
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$bddName = 'confinement';
-
-$connexion = mysqli_connect($servername, $username, $password, $bddName);
-
-include('fonction.php');
+include('fonctions.php');
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +31,7 @@ include('fonction.php');
 					</div>
 
 				</form>
-				<?phps
+				<?php
 				inscription();
 				?>
 			</div>
