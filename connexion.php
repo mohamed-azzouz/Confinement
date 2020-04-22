@@ -1,19 +1,10 @@
 <?php
 session_start();
 include('fonctions.php');
-?>
+require("templates/header2.php"); ?>
 
-<!DOCTYPE html>
-<html>
-    <head>
-	    <title>Connexion</title>
-	    <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-    <header>
-    </header>
     <main id="mainConIns">
-        <section>
+        <section id="mainConIns">
 			<div id="conInsSection">
 				<h1 id="h1CoIn">Connexion</h1>
 				<form action="" method="post" ><br />
@@ -27,9 +18,5 @@ include('fonctions.php');
             </div>
         </section>
     </main>
-    <footer>
-    </footer>
-    </body>
-</html>
-    
-                    
+
+    <?php require("templates/footer.phtml")  ?>

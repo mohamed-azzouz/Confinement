@@ -154,4 +154,105 @@ function addSalon()
 	}
 }
 
+function updateUser()
+{
+	if (isset($_SESSION['login'])) 
+	{
+		$connexion = mysqli_connect("Localhost", "root", "", "confinement") ;
+
+		$requeteLogin = "SELECT * FROM utilisateurs WHERE login = '".$_SESSION['login']."'";         
+		$queryLogin = mysqli_query($connexion, $requeteLogin);         
+		$resultatLogin = mysqli_fetch_all($queryLogin); 
+
+		
+
+
+		if(isset($_POST['modifier']))
+		{
+			 
+
+
+			if (!empty($_POST['login']) && $resultatLogin == $_POST['login'])             
+			{                 
+				echo "Ce Login est déjà prit";             
+			}
+			elseif ($_POST['password'] != $_POST['passwordcon']) 
+			{
+				echo "Les Mots de passes ne correspondent pas";
+			}          
+			else
+			{
+
+				if(isset($_POST["login"]))
+				{
+					$login = $_POST["login"];
+				}
+				if($login != $resultatLogin[0][1] && !empty($_POST['login']))
+
+				{
+					$connexion = mysqli_connect("Localhost", "root", "", "confinement") ;
+					$upLog = "UPDATE utilisateurs SET login = \"$login\" WHERE utilisateurs.login='".$resultatLogin[0][1]."'";
+					$result = mysqli_query($connexion, $upLog);
+
+					$_SESSION['login'] = $login ;
+					header('location:profil.php');
+
+				}
+				if($_POST['password'] != $resultatLogin[0][2] && !empty($_POST['password']))
+				{
+					$password1 = $_POST['password'];
+					$passwordhash = password_hash($password1, PASSWORD_BCRYPT, array('cost' => 12));
+					$connexion = mysqli_connect("Localhost", "root", "", "confinement") ;
+					$upPass = "UPDATE utilisateurs SET password = \"$passwordhash\" WHERE utilisateurs.password='".$resultatLogin[0][2]."'";
+					$result = mysqli_query($connexion, $upPass);
+					
+					header('location:profil.php');
+				}
+			}
+			if (isset($_FILES['avatar']) AND !empty($_FILES['avatar'])) 
+			{
+				$tailleMax = 2097152 ;
+				$extensionsValides = $arrayName = array('jpg', 'jpeg', 'gif', 'png');
+				if ($_FILES['avatar']['size'] <= $tailleMax) 
+				{
+					$extensionsUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
+					if (in_array($extensionsUpload, $extensionsValides)) 
+					{
+						$chemin = "avatar/".$resultatLogin[0][1].".".$extensionsUpload;
+
+						$deplacement = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
+						if ($deplacement) 
+						{
+							$updateAvatar = "UPDATE utilisateurs SET avatar = '".$resultatLogin[0][1].".".$extensionsUpload."' WHERE id = ".$resultatLogin[0][0]."";
+							$queryAvatar = mysqli_query($connexion,$updateAvatar);
+						}
+						else
+						{
+							$msg = "Erreur durant l'importation de votre photo de profil" ;
+						}
+					}
+					else
+					{
+						$msg = "Votre photo de profil doit être au format jpg, jpeg, gif ou png. ";
+					}
+
+				}
+				else
+				{
+					$msg = "Votre photo de profil ne doit pas dépasser 2Mo" ;
+				}
+			}
+
+
+
+
+		}
+	}
+	else
+	{
+		echo "VEUILLEZ VOUS CONNECTEZ";
+	}
+
+}
+
 ?>
