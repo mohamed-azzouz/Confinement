@@ -11,7 +11,7 @@ $connexion = mysqli_connect($servername, $username, $password, $bddName);
 
 include('fonctions.php');
 
-?> 
+?>   
 
 <!DOCTYPE html>
 <html>

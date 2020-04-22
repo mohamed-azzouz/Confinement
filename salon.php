@@ -21,7 +21,7 @@ if (isset($_GET['id']))
     $resultMessage = mysqli_fetch_all($queryMessage);
 
     $countMessage = count($resultMessage) ; 
-    
+      
 
 
 }
