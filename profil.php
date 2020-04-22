@@ -50,3 +50,4 @@ require("templates/header2.php"); ?>
                 </section>
             </section>
         </main>
+        <?php require("templates/footer.phtml")  ?>
