@@ -7,7 +7,7 @@ include('fonctions.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>New Salon</title>
+	<title>New Salon</title> 
 </head>
 <body>
 	<main>
