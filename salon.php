@@ -15,12 +15,11 @@ if (isset($_GET['id']))
     $requeteUser="SELECT * from utilisateurs WHERE id = '".$_SESSION['id']."'";
     $queryUser = mysqli_query($connexion,$requeteUser);
     $resultatUser = mysqli_fetch_assoc($queryUser);
-
-    
-
-
 }
 
+if(!isset($_SESSION["login"])){
+    header("Location:index.php");
+}
 
 
 ?>
