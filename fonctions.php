@@ -39,14 +39,14 @@ function inscription()
 
                     else
                     {
-                        echo '<div class="erreur">Mot de passe et confirmation de mot de passe différents.</div>'.'</br>';
+                        echo '<div class="erreur">Les mots de passe sont différents.</div>'.'</br>';
                     }
 
                 }
 
                 else
                 {
-                    echo '<div class="erreur">Le login est déjà existant, merci de le modifier et de réessayer de nouveau.</div>'.'<br/>';
+                    echo '<div class="erreur">Login déjà éxistant</div>'.'<br/>';
                 }
 
             }
