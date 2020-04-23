@@ -218,4 +218,70 @@ html, body{
     font-family: 'Oswald', sans-serif;
 }
 
+#logoLien{
+    text-decoration: none;
+    color: white;
+}
 /*//////////// PLUS PART DES PAGES ////////////*/
+
+/*//////////// LISTE DES SALONS ////////////*/
+
+#listeSalonMain{
+    background-image:url("Images/listesalonsbg.png");
+    background-size: cover; 
+    height: 734px;
+    width: 100%;
+    /* background-color: black; */
+}
+
+#listeSalonTop{
+    background-image:url("Images/listesalonsbg.png");
+    width: 60%;
+    background-color: white;
+}
+
+
+/*//////////// LISTE DES SALONS ////////////*/
+
+
+
+/*//////////// LISTE DES SALONS ////////////*/
+
+
+/*//////////// CHAT TOAST ////////////*/
+
+#chatSection{
+    width: 30%;
+    background-color: grey;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#chatDiv{
+    background-color: rgb(196, 196, 196);
+    height: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    overflow-y: scroll;
+}
+
+#chatForm{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#pseudoInput{
+    width: 25%;
+}
+
+#messageInput{
+    width: 50%;
+}
+
+/*//////////// CHAT TOAST ////////////*/

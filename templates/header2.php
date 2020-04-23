@@ -8,7 +8,7 @@
             <header id="header1-index">
                 <div id="div-for-headnav">
                     <nav id="header1-nav">
-                        <h1 id="header1-title1">Covidéo-19</h1>
+                        <h1 id="header1-title1"><a id="logoLien" href="index.php">Covidéo-19</a></h1>
                         <ul id="header1-ul">
                             <li><a href="profil.php" class="header1-lien">Profil</a></li>
                             <li><a href="salons.php" class="header1-lien">Liste des salons</a></li>
