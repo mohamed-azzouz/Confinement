@@ -10,7 +10,7 @@ function inscription()
     {
     	
 
-        if(isset($_POST['valider']))
+        if(isset($_POST['sub']))
         {
 
           
@@ -31,7 +31,7 @@ function inscription()
                         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                         $requeteNewUser = "INSERT INTO utilisateurs (login, password, avatar) VALUES ('".$_POST['login']."','".$passwordHash."', 'VIDE')";
                         $queryNewUser = mysqli_query($connexion, $requeteNewUser);
-                        header('location:connexion.php');
+                        header('location:index.php');
                         
                         
 
@@ -58,13 +58,6 @@ function inscription()
 
         }
     }
-    else
-    { 
-        header('location:index.php');
-    }
-
-
-
 }
 
 
@@ -82,7 +75,7 @@ function connexion()
     {
 
 
-        if(isset($_POST['valider']))
+        if(isset($_POST['co']))
         {
             if(!empty($_POST['login']) and !empty($_POST['password']))
             {
@@ -126,11 +119,6 @@ function connexion()
         }
 
     }
-    else
-    { 
-        header('location:index.php');  
-    }
-
 }
 
 function addSalon()
@@ -144,13 +132,16 @@ function addSalon()
 				$connexion = mysqli_connect('Localhost', 'root', '', 'confinement');
 				$requeteAddSalon = "INSERT INTO salon (id_utilisateur, nom) VALUES ('".$_SESSION['id']."', '".$_POST['nameSalon']."')";
 				$queryAddSalon = mysqli_query($connexion, $requeteAddSalon);
-
+				$lastId = "SELECT LAST_INSERT_ID() FROM salon";
+                $queryLastId = mysqli_query($connexion, $lastId);
+				$resultId = mysqli_fetch_all($queryLastId);
+				header('location:salon.php?id='.$resultId[0][0].'');
 			}
 		}
 	}
 	else
 	{
-		echo "VEILLEZ VOUS CONNECTEZ";
+		echo "veuillez vous connectez";
 	}
 }
 

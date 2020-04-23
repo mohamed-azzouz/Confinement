@@ -1,6 +1,6 @@
 <?php
     $connexion = mysqli_connect("localhost", "root","","confinement");
-    $requeteMessage = "SELECT * FROM messages INNER JOIN utilisateurs ON utilisateurs.id = messages.id_utilisateur";
+    $requeteMessage = "SELECT * FROM messages INNER JOIN utilisateurs ON utilisateurs.id = messages.id_utilisateur WHERE id_salon = '".$_GET['id']."'";
                     $queryMessage = mysqli_query($connexion, $requeteMessage);
                     $resultMessage = mysqli_fetch_all($queryMessage);
 

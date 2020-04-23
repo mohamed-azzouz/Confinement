@@ -28,14 +28,16 @@ if (isset($_GET['id']))
 
 <!DOCTYPE html>
 <html lang="fr">
-<link rel="stylesheet" href="salon.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body id="visionage">
+<?php require("templates/header1.phtml"); ?>
     <main>
         <form class ="rechercher" action="" method="POST">
             <input type="text" id="nav" placeholder="Lien Youtube">
@@ -98,11 +100,13 @@ if (isset($_GET['id']))
                     <br>text
                 </div>
             </div>
+
         </main>
+<?php require("templates/footer.phtml"); ?>
         <script>
             setInterval("load_messages()", 500);
             function load_messages(messages){
-                $("#messages").load("salon.php #messages");
+                $("#messages").load("salon.php?id='".$_GET['id']."' #messages");
             }
         </script>
     </body>

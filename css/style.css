@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 
 
 /* ////////// */
@@ -33,24 +34,26 @@ html, body{
 }
 
 #header1-ul{
-    display: flex;
-    width: 40%;
-    justify-content: space-evenly;
-    list-style-type: none;
-    align-items: center;
-    margin: 0;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  /* margin-right: 1%; */
+  width: 34%;
 }
 
+
 #header1-title1{
-    padding: 0 1%;
-    width: 11%;
-    font-family: 'Special Elite', cursive;
-    font-size: 30px;
-    color: white;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    text-decoration: overline;
+  padding: 0 1%;
+  width: 14%;
+  font-family: 'Special Elite', cursive;
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: overline;
 }
 
 .header1-lien{
@@ -60,6 +63,10 @@ html, body{
     font-size: 25px;
     /* font-weight: bold; */
     text-shadow: 0px 0px 3px #423b3b;
+}
+
+.header1-lien:hover{
+  color: #1FC0D9;
 }
 
 #main-index{
@@ -129,6 +136,10 @@ html, body{
     border-radius: 5px;
 }
 
+#but-crea-sal:hover{
+  transform: scale(1.1);
+}
+
 #yout-img{
     width: 12%;
 }
@@ -146,6 +157,10 @@ html, body{
     color: white;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
+}
+
+.foot-lien:hover{
+  color: #1FC0D9;
 }
 
 #foot-ul{
@@ -186,6 +201,137 @@ html, body{
     border-top: 2px solid #5d5959;;
     font-weight: bold;
 }
+
+#form-hidden{
+  position: absolute;
+  flex-direction: column;
+  height: 29%;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  left: 658px;
+  top: 75px;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #74695f66;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px wheat;
+}
+
+#nameSalon{
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+
+#addSalon{
+  background-color: #1FC0D9;
+  width: 15%;
+  height: 15%;
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+#addSalon:hover{
+  transform: scale(1.1);
+}
+
+#creh2-title{
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 1px 3px black;
+}
+
+label[for="nameSalon"]{
+  color:white;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px black;
+}
+
+#inp-namesal{
+  padding: 1% 2%;
+  height: 35%;
+  width: 70%;
+  text-overflow: ellipsis;
+}
+
+#create-error{
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px black;
+    /* text-decoration: underline; */
+    background-color: #00000045;
+    padding: 1%;
+    border-radius: 5px;
+    /* border: 1px ridge #6b0000; */
+    box-shadow: 1px 1px 3px black;
+}
+
+#formco-hidden{
+  position: absolute;
+  height: 30%;
+  width: 16.8%;
+  left: 1595px;
+  top: 52px;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #74695f66;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-right: 1px inset black;
+  border-bottom: 1px inset black;
+  border-left: 1px inset black;
+  box-shadow: -1px 4px 6px black;
+}
+
+#formsign-hidden{
+  position: absolute;
+  height: 30%;
+  width: 16.8%;
+  left: 1268px;
+  top: 52px;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #74695f66;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-right: 1px inset black;
+  border-bottom: 1px inset black;
+  border-left: 1px inset black;
+  box-shadow: 1px 4px 6px black;
+}
+
+.inpsub-cosign{
+  width: 30%;
+  height: 10%;
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  font-size: 18px;
+  background-color: #9e9898;
+  border: none;
+  border: 1px outset #909090;
+  text-shadow: 1px 1px 3px black;
+}
+
+.inpsize{
+  padding: 1%;
+  border: 2px inset #906262;
+}
+
+label[for=login],label[for=password],label[for=confirmpassword]{
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+
+
+
 
 
 
