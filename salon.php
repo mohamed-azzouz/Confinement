@@ -6,9 +6,7 @@ if (isset($_GET['id']))
 {
 
     $connexion = mysqli_connect("localhost", "root","","confinement");
-    $requetemessage="SELECT * FROM salon WHERE id = '".$_GET['id']."'";
-    $querymessage = mysqli_query($connexion,$requetemessage);
-    $resultatmessage = mysqli_fetch_all($querymessage);
+   
 
    
     
