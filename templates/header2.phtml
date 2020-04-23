@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <body id="header1-body">
+            <header id="header2-index">
+                <div id="div-for-headnav">
+                    <nav id="header1-nav">
+                        <a href="index.php" id="header1-title1"><h1 >Covidéo-19</h1></a>
+                        <ul id="header1-ul">
+                            <?php if(isset($_SESSION["login"])): ?>
+                                <li class="header-li"><a href="profil.php" class="header1-lien">Profil</a></li>
+                                <li class="header-li"><a href="salons.php" class="header1-lien">Liste des salons</a></li>
+                                <li class="header-li"><a href="index.php?destroy=die" class="header1-lien">Déconnexion(<?=$_SESSION["login"] ?>)</a></li>
+                            <?php else: ?>
+                                <li class="header-li"><a href="#" class="header1-lien" onClick="AfficherMasquerSign()">Inscription</a></li>
+                                <li class="header-li"><a href="#" class="header1-lien" onClick="AfficherMasquerCo()">Connexion</a></li>
+                            <?php endif; ?>     
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+<?php
+    if(isset($_GET['destroy'])){
+    session_destroy();
+    header("Location:index.php");
+    }
+?>
