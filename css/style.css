@@ -439,6 +439,53 @@ label[for=login],label[for=password],label[for=confirmpassword]{
   padding: 10px;
 }
 
+/*//////////// LISTE DES SALONS ////////////*/
+
+#listeSalonMain{
+  background-image:url("../Images/listesalonsbg.png");
+  background-size: cover; 
+  height: 734px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+#listeSalonTop{
+  width: 60%;
+  background-color: white;
+  height: 5000px;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+}
+
+#topPageArt{
+  background-color: #73695f;
+  font-size: 30px;
+  color: white;
+  width: 30%;
+  padding: 1%;
+  font-family: 'Hammersmith One', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+#salonDivGen{
+  background-color: #575757;
+  font-size: 17px;
+  color: white;
+  width: 80%;
+  padding: 1.5%;
+  margin-bottom: 2.5%;
+  border-radius: 15px 15px 15px 15px;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+/*//////////// LISTE DES SALONS ////////////*/
 
 
 
