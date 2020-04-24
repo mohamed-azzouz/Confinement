@@ -19,7 +19,7 @@ include('fonctions.php');
 			?>
 		</form>
 
-		<n
+		
 	</main>
 
 </body>

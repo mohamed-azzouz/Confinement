@@ -59,6 +59,7 @@ body{
   height: 290px;
   border: rgb(0, 0, 0) solid 2px;
   font-weight: bold;
+  overflow : scroll;
 }
 
 #bouton{

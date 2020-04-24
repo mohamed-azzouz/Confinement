@@ -145,6 +145,14 @@ function addSalon()
 				$requeteAddSalon = "INSERT INTO salon (id_utilisateur, nom) VALUES ('".$_SESSION['id']."', '".$_POST['nameSalon']."')";
 				$queryAddSalon = mysqli_query($connexion, $requeteAddSalon);
 
+				$lastId = "SELECT LAST_INSERT_ID() FROM salon";
+				$queryLastId = mysqli_query($connexion, $lastId);
+				$resultId = mysqli_fetch_all($queryLastId);
+
+				header('location:salon.php?id='.$resultId[0][0].'');
+
+				
+
 			}
 		}
 	}
