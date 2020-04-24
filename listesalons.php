@@ -9,8 +9,6 @@ $queryListeSalons = mysqli_query($connexion,$requeteListeSalons);
 $resultatListeSalons = mysqli_fetch_all($queryListeSalons);
 $countListeSalons = count($resultatListeSalons);
 
-var_dump($resultatListeSalons);
-
 require("templates/header2.php"); ?>
 
     <main id="listeSalonMain">
