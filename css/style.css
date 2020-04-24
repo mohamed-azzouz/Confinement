@@ -1,0 +1,499 @@
+/* ////////// POLICES ////////// */
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap');
+
+
+
+
+
+/* ////////// */
+
+
+html, body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ////////// INDEX ////////// */
+
+
+#header1-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #DFDFDF;
+}
+
+#header1-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+#header1-ul{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  /* margin-right: 1%; */
+  width: 34%;
+}
+
+
+#header1-title1{
+  padding: 0 1%;
+  width: 14%;
+  font-family: 'Special Elite', cursive;
+  font-size: 20px;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-decoration: overline;
+}
+
+.header1-lien{
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    /* font-weight: bold; */
+    text-shadow: 0px 0px 3px #423b3b;
+}
+
+.header1-lien:hover{
+  color: #1FC0D9;
+}
+
+#main-index{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 89%;
+}
+
+#header1-backbox{
+    height: 70%;
+    background-image: url(../img/backboximg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 31%;
+    box-shadow: 0px 1px 3px black;
+}
+
+#header1-index{
+    box-shadow: 0px 1px 4px #e4e4e4;
+    background-color: #74695f5e;
+    display: flex;
+    height: 8%;
+    align-items: center;
+}
+
+#footer{
+    background-color: #74695F;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 3px black;
+}
+
+#main-div{
+    width: 30%;
+    height: 44%;
+    margin-bottom: 0.5%;
+    margin-right: 1.4%;
+    background-color: #74695f66;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px wheat;
+}
+
+#sec1-index{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-index{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#but-crea-sal{
+    width: 70%;
+    height: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    background-color: #1FC0D9;
+    border-radius: 5px;
+}
+
+#but-crea-sal:hover{
+  transform: scale(1.1);
+}
+
+#yout-img{
+    width: 12%;
+}
+
+#div-for-headnav{
+    width: 100%;
+}
+
+#logo-c19{
+    width: 90%;
+    height: 90%;
+}
+
+.foot-lien{
+    color: white;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+.foot-lien:hover{
+  color: #1FC0D9;
+}
+
+#foot-ul{
+    padding: 0;
+    list-style-type: none;
+    margin: 0.2%;
+}
+
+#box-logo-c19{
+    height: 80%;
+    width: 9%;
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+}
+
+#article-index{
+    position: absolute;
+    left: 29px;
+    background-color: #ffffffed;
+    top: 542px;
+    height: 21%;
+    padding: 1%;
+    width: 27.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px ridge black;
+    font-family: 'Merriweather', serif;
+    color: #5d5959;
+}
+
+#index-title2{
+    margin: 0;
+}
+
+#box-index-para{
+    border-top: 2px solid #5d5959;;
+    font-weight: bold;
+}
+
+#form-hidden{
+  position: absolute;
+  flex-direction: column;
+  height: 27.5%;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  left: 658px;
+  top: 84px;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #74695f66;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px wheat;
+}
+
+#nameSalon{
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+
+#addSalon{
+  background-color: #1FC0D9;
+  width: 15%;
+  height: 15%;
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+#addSalon:hover{
+  transform: scale(1.1);
+}
+
+#creh2-title{
+  color: white;
+  font-size: 25px;
+  text-shadow: 1px 1px 3px black;
+}
+
+label[for="nameSalon"]{
+  color:white;
+  font-size: 20px;
+  text-shadow: 1px 1px 3px black;
+}
+
+#inp-namesal{
+  padding: 1% 2%;
+  height: 35%;
+  width: 70%;
+  text-overflow: ellipsis;
+}
+
+#create-error{
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px black;
+    /* text-decoration: underline; */
+    background-color: #00000045;
+    padding: 1%;
+    border-radius: 5px;
+    /* border: 1px ridge #6b0000; */
+    box-shadow: 1px 1px 3px black;
+}
+
+#formco-hidden{
+  position: absolute;
+  height: 30%;
+  width: 16.8%;
+  left: 1595px;
+  top: 52px;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #74695f66;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-right: 1px inset black;
+  border-bottom: 1px inset black;
+  border-left: 1px inset black;
+  box-shadow: -1px 4px 6px black;
+}
+
+#formsign-hidden{
+  position: absolute;
+  height: 30%;
+  width: 16.8%;
+  left: 1268px;
+  top: 52px;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #74695f66;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-right: 1px inset black;
+  border-bottom: 1px inset black;
+  border-left: 1px inset black;
+  box-shadow: 1px 4px 6px black;
+}
+
+.inpsub-cosign{
+  width: 30%;
+  height: 10%;
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  font-size: 18px;
+  background-color: #9e9898;
+  border: none;
+  border: 1px outset #909090;
+  text-shadow: 1px 1px 3px black;
+}
+
+.inpsize{
+  padding: 1%;
+  border: 2px inset #906262;
+}
+
+label[for=login],label[for=password],label[for=confirmpassword]{
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+
+
+
+                    /*////////// SALON //////////*/
+
+
+#header2-index{
+  box-shadow: 0px 1px 4px #e4e4e4;
+  background-color: #74695F;
+  display: flex;
+  height: 6%;
+  align-items: center;
+}
+
+#main-salon{
+  height: 89%;
+}
+
+#box{
+  display: flex;
+    justify-content: space-around;
+    height: 93%;
+    align-items: center;
+}
+
+#rechercher{
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3F3E3A;
+}
+
+#inp-search{
+  padding: 0.2%;
+  width: 16%;
+  height: 32%;
+}
+
+#inpsub-search{
+  height: 53%;
+}
+
+#send{
+  padding: 4%;
+  display: flex;
+  justify-content: center;
+}
+
+#chatbox{
+  width: 18%;
+  height: 62%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #b1b1a357;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px #656565cf;
+}
+
+#messages{
+  flex-basis: 90%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: auto;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+#envoyer{
+  width: 84%;
+  padding: 2.8%;
+}
+
+#bouton{
+  flex-basis: 10%;
+}
+
+#mess{
+  background-color: #a9ff91;
+  padding: 2%;
+  margin: 2% 0;
+  margin-right: 2%;
+}
+
+#yout{
+  width: 43px;
+}
+
+#box-imgyout{
+  display: flex;
+  /* border: 2px solid #ffffff; */
+  border-right: none;
+  margin-right: 1px;
+}
+
+#historique{
+  height: 59%;
+  background-color: #b1b1a357;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px #656565cf;
+  padding: 10px;
+}
+
+/*//////////// LISTE DES SALONS ////////////*/
+
+#listeSalonMain{
+  background-image:url("../Images/listesalonsbg.png");
+  background-size: cover; 
+  height: 734px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+#listeSalonTop{
+  width: 60%;
+  background-color: white;
+  height: 5000px;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+}
+
+#topPageArt{
+  background-color: #73695f;
+  font-size: 30px;
+  color: white;
+  width: 30%;
+  padding: 1%;
+  font-family: 'Hammersmith One', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+#salonDivGen{
+  background-color: #575757;
+  font-size: 17px;
+  color: white;
+  width: 80%;
+  padding: 1.5%;
+  margin-bottom: 2.5%;
+  border-radius: 15px 15px 15px 15px;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+/*//////////// LISTE DES SALONS ////////////*/
+
+
+
+
+
+
+
+
+
+
+

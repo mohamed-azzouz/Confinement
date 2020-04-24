@@ -1,0 +1,17 @@
+        <footer id="footer">
+            <div id="box-logo-c19">
+                <a href="index.php"><img src="img/serjuani.png" alt="logo" id="logo-c19"></a>
+            </div>
+            <ul id="foot-ul">
+                <?php if(isset($_SESSION["login"])): ?>
+                    <li><a href="profil.php" class="foot-lien">Profil</a></li>
+                    <li><a href="salons.php" class="foot-lien">Liste des salons</a></li>
+                    <li><a href="index.php?destroy=die" class="foot-lien">Déconnexion(<?=$_SESSION["login"] ?>)</a></li>
+                <?php else: ?>
+                    <li><a href="#" class="foot-lien" onClick="AfficherMasquerSign()">Inscription</a></li>
+                    <li><a href="#" class="foot-lien" onClick="AfficherMasquerCo()">Connexion</a></li>
+                    <?php endif; ?>     
+            </ul>
+        </footer>
+    </body>
+</html>
