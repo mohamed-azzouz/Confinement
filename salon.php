@@ -24,7 +24,6 @@ if (isset($_POST['lien']) AND !empty($_POST['lien']))
  	$newLien = "INSERT INTO historique(id_utilisateur, id_salon, lien) VALUES ('".$_SESSION['id']."', '".$_GET['id']."', '".$_POST['lien']."')";
  	$queryNewLien = mysqli_query($connexion, $newLien);
 
- 	echo $newLien;
 }
 
 $requeteHistorique = "SELECT * FROM historique INNER JOIN utilisateurs ON utilisateurs.id = historique.id_utilisateur INNER JOIN salon ON salon.id = historique.id_salon WHERE id_salon = '".$_GET["id"]."'";
@@ -48,7 +47,7 @@ if(!isset($_SESSION["login"])){
             <div id="box-imgyout">
                 <img id="yout" src="img/yout.png" alt="">
             </div>
-            <input type="text" id="inp-search" placeholder="Lien Youtube">
+            <input type="text" id="inp-search" placeholder="Lien Youtube" name="lien">
             <input type="submit" id="inpsub-search" value="search">
         </form>
         <div id="box">

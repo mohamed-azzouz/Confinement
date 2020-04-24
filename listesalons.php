@@ -21,7 +21,7 @@ require("templates/header2.php"); ?>
                     while($i != $countListeSalons)
                     { ?>
                         <div id="salonDivGen">
-                            <?php echo $resultatListeSalons[$i][2]. " | " .$resultatListeSalons[$i][4]; ?>
+                            <?php echo '<a href="salon.php?id='.$resultatListeSalons[$i][0].'">'.$resultatListeSalons[$i][2].'</a>'. " | " .$resultatListeSalons[$i][4]; ?>
                         </div>
                     <?php $i++; } ?>
         </section>

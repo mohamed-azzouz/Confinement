@@ -10,11 +10,14 @@
                     <nav id="header1-nav">
                         <h1 id="header1-title1"><a id="logoLien" href="index.php">Covidéo-19</a></h1>
                         <ul id="header1-ul">
-                            <li><a href="profil.php" class="header1-lien">Profil</a></li>
-                            <li><a href="salons.php" class="header1-lien">Liste des salons</a></li>
-                            <li><a href="inscription.php" class="header1-lien">Inscription</a></li>
-                            <li><a href="connexion.php" class="header1-lien">Connexion</a></li>
-                            <li><a href="deconnexion.php" class="header1-lien">Déconnexion</a></li>
+                            <?php if(isset($_SESSION["login"])): ?>
+                                <li class="header-li"><a href="profil.php" class="header1-lien">Profil</a></li>
+                                <li class="header-li"><a href="listesalons.php" class="header1-lien">Liste des salons</a></li>
+                                <li class="header-li"><a href="index.php?destroy=die" class="header1-lien">Déconnexion(<?=$_SESSION["login"] ?>)</a></li>
+                            <?php else: ?>
+                                <li class="header-li"><a href="#" class="header1-lien" onClick="AfficherMasquerSign()">Inscription</a></li>
+                                <li class="header-li"><a href="#" class="header1-lien" onClick="AfficherMasquerCo()">Connexion</a></li>
+                            <?php endif; ?>     
                         </ul>
                     </nav>
                 </div>
